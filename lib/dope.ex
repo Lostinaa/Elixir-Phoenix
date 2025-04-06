@@ -4,10 +4,9 @@ defmodule Dope do
     children = [
       # Starts a worker by calling: Dope.Worker.start_link(arg)
       # {Dope.Worker, arg}
-    ]
-
-    opts = [strategy: :one_for_one, name: Dope.Supervisor]
+]
+IO.puts("Starting Dope Application")
+opts = [strategy: :one_for_one, name: Dope.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
-dope.
